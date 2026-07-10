@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="75%" cy="20%" r="75%">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity=".75"/>
+      <stop offset=".52" stop-color="#0b0b0f"/>
+      <stop offset="1" stop-color="#0b0b0f"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="970" cy="130" r="190" fill="none" stroke="#d7ff48" stroke-width="2" opacity=".6"/>
+  <circle cx="970" cy="130" r="120" fill="none" stroke="#fff" stroke-width="1" opacity=".25"/>
+  <text x="76" y="235" fill="#d7ff48" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="6">MICRO AGENCY</text>
+  <text x="72" y="340" fill="#fff" font-family="Arial, sans-serif" font-size="74" font-weight="700">Small team.</text>
+  <text x="72" y="425" fill="#fff" font-family="Arial, sans-serif" font-size="74" font-weight="700">Serious digital growth.</text>
+  <text x="76" y="510" fill="#b7b7c5" font-family="Arial, sans-serif" font-size="28">Web development · AI automation · Social media</text>
+</svg>
