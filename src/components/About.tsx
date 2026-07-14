@@ -1,8 +1,12 @@
-import React from 'react'
+import React from "react";
 
-type IconName = 'arrow' | 'globe' | 'spark' | 'automation' | 'chart' | 'layers';
+type IconName = "arrow" | "globe" | "spark" | "automation" | "chart" | "layers";
 
-const About = ({ Icon }: { Icon: React.ComponentType<{name:IconName; size?: number}> }) => {
+const About = ({
+  Icon,
+}: {
+  Icon: React.ComponentType<{ name: IconName; size?: number }>;
+}) => {
   return (
     <section className='proof-section section-pad' id='about'>
       <div className='shell proof-grid'>
@@ -57,6 +61,6 @@ const About = ({ Icon }: { Icon: React.ComponentType<{name:IconName; size?: numb
       </div>
     </section>
   );
-}
+};
 
-export default About
+export default About;
