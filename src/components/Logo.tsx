@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Logo() {
-    const [compact, setCompact] = React.useState(false);
+    const [compact] = React.useState(false);
   return (
     <a className='logo' href='#top' aria-label='Micro Agency home'>
       <svg className='logo-mark' viewBox='0 0 40 40' aria-hidden='true'>

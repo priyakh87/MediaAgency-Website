@@ -1,8 +1,23 @@
 # Micro Agency
+A modern, responsive website developed for a media agency client as part of a freelance project. The goal was to create a fast, visually engaging, and user-friendly website that effectively showcases the agency's services, portfolio, and brand identity while providing a seamless experience across desktop and mobile devices.
 
-A responsive agency portfolio website for web development, AI automation, and social media marketing.
+Project Overview
 
-## Stack
+This project was designed and developed to help the client establish a strong online presence with a clean, modern interface and optimized performance. The website focuses on responsive layouts, intuitive navigation, and reusable UI components to ensure scalability and maintainability.
+
+Features
+Responsive, mobile-first design
+Modern and clean user interface
+Landing page with engaging hero section
+Services and portfolio showcase
+Reusable and modular component architecture
+Optimized performance and fast loading
+Cross-browser compatibility
+SEO-friendly structure
+Smooth user interactions and animations
+
+
+Tech Stack
 
 - React
 - TypeScript
@@ -75,14 +90,7 @@ The Vite `base` is configured as `./`, so it works in a project repository path 
 - Build command: `npm run build`.
 - Publish directory: `dist`.
 
-## Before publishing as your portfolio
 
-- Replace the environment variables.
-- Replace concept project descriptions with projects you actually built as those become available.
-- Add real case-study links rather than inventing clients or results.
-- Update the Open Graph image and site description if you change positioning.
-- Test the contact email and calendar link.
+Disclaimer
 
-## License
-
-You may use and modify this project for your own portfolio and freelance business.
+This repository represents the frontend implementation developed for a freelance client. Any proprietary business information, content, branding assets, or confidential project details have been excluded or anonymized where appropriate.
