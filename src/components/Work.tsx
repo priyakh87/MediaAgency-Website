@@ -1,4 +1,6 @@
 
+import React from 'react'
+
 const projects = [
   {
     category: "Web development",
@@ -8,6 +10,11 @@ const projects = [
     tags: ["React", "TypeScript", "UX strategy"],
     className: "project-violet",
     label: "Concept project",
+    images: [
+      '/images/northstar-1.svg',
+      '/images/northstar-2.svg',
+      '/images/northstar-3.svg',
+    ],
   },
   {
     category: "AI automation",
@@ -29,7 +36,16 @@ const projects = [
   },
 ];
 const Work = () => {
-    
+  const [selected, setSelected] = React.useState<any>(null);
+
+  function openProject(project: any) {
+    setSelected(project);
+  }
+
+  function closeProject() {
+    setSelected(null);
+  }
+
   return (
     <section className='work section-pad' id='work'>
       <div className='shell'>
@@ -49,6 +65,9 @@ const Work = () => {
         <div className='project-grid'>
           {projects.map((project, index) => (
             <article
+              onClick={() => openProject(project)}
+              role='button'
+              tabIndex={0}
               className={`project-card ${project.className} ${index === 0 ? "project-wide" : ""}`}
               key={project.title}
               data-reveal>
@@ -63,13 +82,16 @@ const Work = () => {
                     <i />
                     <i />
                   </div>
-                  <div className='project-art-grid'>
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                    <span />
+                  <div className='project-thumb-grid'>
+                    {(project.images || []).map((src: string, i: number) => (
+                      <img
+                        key={src + i}
+                        src={src}
+                        alt={`${project.title} ${i + 1}`}
+                        className='project-thumb'
+                        loading='lazy'
+                      />
+                    ))}
                   </div>
                   <div className='project-art-line line-a' />
                   <div className='project-art-line line-b' />
@@ -89,6 +111,27 @@ const Work = () => {
           ))}
         </div>
       </div>
+      {selected && (
+        <div className='project-modal' role='dialog' aria-modal='true' onClick={closeProject}>
+          <div className='project-modal-body' onClick={(e) => e.stopPropagation()}>
+            <button className='modal-close' onClick={closeProject} aria-label='Close'>×</button>
+            <div className='modal-media'>
+              {selected.images?.map((src: string, i: number) => (
+                <img key={i} src={src} alt={`${selected.title} ${i + 1}`} />
+              ))}
+            </div>
+            <div className='modal-copy'>
+              <h3>{selected.title}</h3>
+              <p>{selected.description}</p>
+              <div className='tags'>
+                {selected.tags?.map((t: string) => (
+                  <span key={t}>{t}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
